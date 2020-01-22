@@ -17,6 +17,6 @@ export class ProdutoService {
 
     /*adicionando o token na url*/
     /*o usuário tem que estar logado para poder acessar a lista de produtos*/
-    return this.http.get("http://localhost:8080/produto/todos?token" + token);
+    return this.http.get("http://localhost:8080/produto/todos?token=" + token);
   }
 }

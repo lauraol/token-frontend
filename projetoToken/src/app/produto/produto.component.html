@@ -1,7 +1,8 @@
 <!--vamos exibir a lista de produtos-->
 <div class="row" *ngFor="let ITEM of lista">
     <div class="col-md-12">
-        <h3>{{ITEM.codigo}} - {{ITEM.nome}}</h3>
+        <h3>Cod: {{ITEM.codigo}}</h3>
+            <h3>{{ITEM.titulo}}</h3>
         <p><strong>Detalhes:</strong> {{ITEM.detalhes}}</p>
         <p><strong>Preço:</strong> {{ITEM.preco}}</p>
         <hr/>

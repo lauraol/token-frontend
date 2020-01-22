@@ -1,16 +1,20 @@
 <div class="row">
-    <div class="col-md-6"  id="formulario">
-<form>
+  <div class="col-md-6" id="formulario">
+
     <div class="form-group">
       <label for="exampleInputEmail1">E-mail</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+        [(ngModel)]="usuario.email"/>
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Senha</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
+      <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="usuario.senha"/>
     </div>
-    
-    <button type="submit" class="btn btn-primary">Enviar</button>
-  </form>
-</div>
+
+    <!--enevento no botão para enviar os dados e redirecionar-->
+    <button type="submit" class="btn btn-primary" (click)="enviarDados();">Enviar</button>
+
+    <!--se a mensagem for diferente de 0, irá exibir a minha mensagem de erro-->
+  <h3 class="text-center" id="erro" *ngIf="mensagem != 0">Usuário/Senha inválidos</h3>
+  </div>
 </div>
